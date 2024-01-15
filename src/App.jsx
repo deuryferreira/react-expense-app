@@ -1,17 +1,18 @@
+import { GlobalProvider } from './context/GlobalState'
+import Header from './components/Header'
+import Balance from './components/Balance'
+import TransactionForm from './components/TransactionForm'
 
-import { useState } from 'react'
-import TaskCreator from "./components/TaskCreator";
-import './App.css'
 
 function App() {
-
-
-
-  return (
-    <div className='App'>
-      <TaskCreator></TaskCreator>
-    </div>
-  )
+    return (
+        <GlobalProvider>
+            <Header />
+            <h1>App de gasros</h1>
+            <Balance />
+            <TransactionForm />
+        </GlobalProvider>
+    )
 }
 
 export default App
