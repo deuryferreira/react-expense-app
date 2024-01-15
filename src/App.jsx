@@ -1,15 +1,15 @@
 
 import { useState } from 'react'
+import TaskCreator from "./components/TaskCreator";
 import './App.css'
 
 function App() {
 
-  const [newTaskName, setNewTaskName] = useState()
+
 
   return (
     <div className='App'>
-      <input type="text" placeholder='Write a New Task' onChange={(e) => setNewTaskName(e.target.value)} />
-      <button onClick={() => alert(newTaskName)}>Save</button>
+      <TaskCreator></TaskCreator>
     </div>
   )
 }
