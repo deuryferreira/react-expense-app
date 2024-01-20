@@ -1,8 +1,8 @@
 import { GlobalProvider } from './context/GlobalState'
 import Header from './components/Header'
 import Balance from './components/Balance'
-import TransactionForm from './components/TransactionForm'
-
+import Transactionform from './components/transactions/TransactionForm'
+import TransactionList from './components/transactions/TransactionList'
 
 function App() {
     return (
@@ -10,7 +10,8 @@ function App() {
             <Header />
             <h1>App de gasros</h1>
             <Balance />
-            <TransactionForm />
+            <Transactionform />
+            <TransactionList />
         </GlobalProvider>
     )
 }
