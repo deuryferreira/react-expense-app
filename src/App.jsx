@@ -8,7 +8,7 @@ function App() {
     return (
         <GlobalProvider>
             <Header />
-            <h1>App de gasros</h1>
+            <h1>Expenses Tracker DF</h1>
             <Balance />
             <Transactionform />
             <TransactionList />
