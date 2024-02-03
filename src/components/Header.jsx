@@ -1,7 +1,7 @@
 
 function Header() {
     return (
-        <div>Header</div>
+        <h1>Expenses Tracker DF</h1>
     )
 }
 
