@@ -1,4 +1,5 @@
 import { useGlobalState } from '../../context/GlobalState'
+import TransactionItem from './TransactionItem'
 
 function TransactionList() {
 
@@ -6,17 +7,18 @@ function TransactionList() {
 
 
     return (
-        <div>{
-            transactions.map(transaction => (
+        <>
+            <h3 className='text-slate-300 font-bold text-xl block w-full'>History</h3>
+            <ul>
+                {
 
-                <div key={transaction.id}>
-                    <p>{transaction.description}</p>
-                    <span>{transaction.amount}</span>
-                    <button onClick={() => { deleteTransaction(transaction.id) }}>x</button>
-                </div>
-            ))
-        }
-        </div>
+                    transactions.map(transaction => (
+
+                        <TransactionItem transaction={transaction} key={transaction.id} />
+                    ))
+                }
+            </ul>
+        </>
     )
 }
 
