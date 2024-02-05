@@ -6,11 +6,12 @@ function Balance() {
 
     const amount = transactions.map((transaction) => transaction.amount)
     const total = amount.reduce((acc, item) => (acc += item), 0)
+        .toFixed(2)
 
     return (
         <div className='flex justify-between'>
             <h3>Your Balance</h3>
-            <h1 className='text-2xl font-bold'>Total ${JSON.stringify(total, null, 2)}</h1>
+            <h1 className='text-2xl font-bold'>Total ${total}</h1>
 
         </div>
     )
