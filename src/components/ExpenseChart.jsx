@@ -35,7 +35,7 @@ function ExpenseChart() {
     console.log(`Calculo de gastos: ${totalExpense()}`)
     console.log(`Calculo de INGRESOS: ${totalIncome()}`)
 
-    const totalExpensesPorcentage = Math.round(((totalExpense() / totalIncome()) * 100) * 100) / 100 * -1;
+    const totalExpensesPorcentage = Math.round(((totalExpense() / totalIncome()) * 100) * -1);
     const totalIncomesPertantage = 100 - totalExpensesPorcentage;
 
 
@@ -51,7 +51,7 @@ function ExpenseChart() {
                 { x: "Incomes", y: totalIncomesPertantage },
 
             ]}
-            animate={{ duration: 1000 }}
+            animate={{ duration: 500 }}
             labels={({ datum }) => `${datum.y}%`}
             labelComponent={<VictoryLabel angle={65} style={{ fill: 'white' }} />}
         />
