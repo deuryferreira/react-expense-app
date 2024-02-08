@@ -35,8 +35,8 @@ function ExpenseChart() {
     console.log(`Calculo de gastos: ${totalExpense()}`)
     console.log(`Calculo de INGRESOS: ${totalIncome()}`)
 
-    const totalExpensesPorcentage = Math.round((totalExpense() / totalIncome()) * 100)
-    const totalIncomesPertantage = Math.round((totalIncome() * 100) / totalExpense());
+    const totalExpensesPorcentage = Math.round((totalExpense() / totalIncome()) * 100) * -1;
+    const totalIncomesPertantage = 100 - totalExpensesPorcentage;
 
 
     console.log(`Total de gastos grafico: ${totalExpensesPorcentage}`)
